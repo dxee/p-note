@@ -11,7 +11,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `P-NOTE`,
-    description: `A MDX notebook.`,
+    description: `A MDX notebook template.`,
     author: `bing.fxx@gmail.com`,
   },
   plugins: [

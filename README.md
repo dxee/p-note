@@ -1,2 +1,2 @@
 # P-NOTE
-[WIP] A mdx notebook.
+[WIP] A MDX notebook template.

@@ -1,7 +1,7 @@
 {
   "name": "p-note",
   "private": false,
-  "description": "A mdx notebook",
+  "description": "A MDX notebook template",
   "version": "0.0.1",
   "author": "Bing Fan <bing.fxx@gmail.com>",
   "dependencies": {
