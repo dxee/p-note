@@ -11,7 +11,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `P-NOTE`,
-    description: `A professional notebook.`,
+    description: `A MDX notebook.`,
     author: `bing.fxx@gmail.com`,
   },
   plugins: [
@@ -99,8 +99,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        name: 'content',
         path: `${__dirname}/src/content`,
-        name: 'content'
       }
     },
     `gatsby-transformer-sharp`,
@@ -108,8 +108,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `p-note`,
+        short_name: `note`,
         start_url: `/`,
         background_color: `#0E2339`,
         theme_color: `#0E2339`,
