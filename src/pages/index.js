@@ -19,7 +19,7 @@ const IndexPage = ({ location }) => (
             marginTop: 0,
           }}
         >
-          电子笔记本.
+          MDX笔记本.
         </h3>
         <p>
           记录日常工作信息， 方便快速查找.

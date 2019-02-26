@@ -45,7 +45,7 @@ const DocTemplate = ({ data, location }) => {
             </MDXProvider>
             <Divider />
             <a
-              href={`https://xxx/tree/master/src/${
+              href={`https://github.com/dxee/p-note/tree/master/src/${
                 data.mdx.fields.path
               }`}
               target="_blank"

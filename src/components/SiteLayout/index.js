@@ -13,11 +13,11 @@ export const UtilNav = () => {
   return (
     <div>
       <ButtonGroup>
-        <Button onClick={() => window.open('#')} type="default">
+        <Button onClick={() => window.open(`https://github.com/dxee/p-note/tree/${version}`)} type="default">
           {version} <Icon type="branches" />
         </Button>
-        <Button onClick={() => window.open('#')} type="default">
-          <Icon type="gitlab" /> GitLab
+        <Button onClick={() => window.open('https://github.com/dxee/p-note')} type="default">
+          <Icon type="github" /> GitHub
         </Button>
       </ButtonGroup>
     </div>

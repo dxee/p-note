@@ -1,2 +1,2 @@
 # P-NOTE
-[WIP] A professional notebook.
+[WIP] A mdx notebook.
