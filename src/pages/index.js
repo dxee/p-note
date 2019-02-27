@@ -21,9 +21,7 @@ const IndexPage = ({ location }) => (
         >
           MDX笔记本.
         </h3>
-        <p>
-          记录日常工作信息， 方便快速查找.
-        </p>
+        <p>记录日常工作信息， 方便快速查找.</p>
       </div>
       <Divider />
     </Row>

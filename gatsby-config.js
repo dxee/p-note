@@ -15,13 +15,15 @@ module.exports = {
     author: `bing.fxx@gmail.com`,
   },
   plugins: [
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    `gatsby-plugin-react-helmet`,
     {
       resolve: 'gatsby-plugin-antd',
       options: {
         style: true,
       },
     },
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-mdx`,
       options: {
@@ -88,7 +90,6 @@ module.exports = {
         },
       },
     },
-    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -103,8 +104,6 @@ module.exports = {
         path: `${__dirname}/src/content`,
       }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -115,6 +114,37 @@ module.exports = {
         theme_color: `#0E2339`,
         display: `minimal-ui`,
         icon: `src/images/icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-lunr`,
+      options: {
+        languages: [
+          {
+            // ISO 639-1 language codes. See https://lunrjs.com/guides/language_support.html for details
+            name: 'en',
+          },
+        ],
+        // Fields to index. If store === true value will be stored in index file.
+        // Attributes for custom indexing logic. See https://lunrjs.com/docs/lunr.Builder.html for details
+        fields: [
+          { name: 'path', store: true },
+          { name: 'title', store: true, attributes: { boost: 20 } },
+          { name: 'description', store: true },
+          { name: 'content' },
+        ],
+        // How to resolve each field's value for a supported node type
+        resolvers: {
+          // For any node of type MarkdownRemark, list how to resolve the fields' values
+          Mdx: {
+            title: node => node.frontmatter.title,
+            description: node => node.frontmatter.description,
+            content: node => node.rawBody,
+            path: node => node.fields.slug,
+          },
+        },
+        //custom index file name, default is search_index.json
+        filename: 'search_index.json',
       },
     },
   ],

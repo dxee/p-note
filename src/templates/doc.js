@@ -61,9 +61,7 @@ const DocTemplate = ({ data, location }) => {
           {data.mdx.tableOfContents.items &&
           data.mdx.tableOfContents.items.length ? (
             <Anchor offsetTop={0}>
-              <h4 style={{ paddingLeft: '13px', marginTop: '10px' }}>
-                目录:
-              </h4>
+              <h4 style={{ paddingLeft: '13px', marginTop: '10px' }}>目录:</h4>
               {data.mdx.tableOfContents.items &&
                 data.mdx.tableOfContents.items.map(item => {
                   return (
