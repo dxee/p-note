@@ -5,7 +5,14 @@ const Option = AutoComplete.Option
 
 export default class Search extends Component {
   state = {
+    shouldRender: false,
     results: [],
+  }
+
+  componentDidMount() {
+    this.setState({
+      shouldRender: true,
+    })
   }
 
   renderOption(hit) {
@@ -32,7 +39,12 @@ export default class Search extends Component {
   }
 
   render() {
-    const { results } = this.state
+    const { shouldRender, results } = this.state
+    
+    if (!shouldRender) {
+      return null
+    }
+
     return (
       <div
         className="certain-category-search-wrapper"
