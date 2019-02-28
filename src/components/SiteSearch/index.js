@@ -19,7 +19,7 @@ export default class Search extends Component {
 
   getSearchResults(query) {
     if (!query || !window.__LUNR__) return []
-    const lunrIndex = window.__LUNR__[this.props.lng];
+    const lunrIndex = window.__LUNR__[this.props.lng]
     // you can  customize your search , see https://lunrjs.com/guides/searching.html
     const results = lunrIndex.index.search(query)
     return results.map(({ ref }) => this.renderOption(lunrIndex.store[ref]))
