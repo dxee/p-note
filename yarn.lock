@@ -4951,7 +4951,7 @@ gatsby-plugin-less@2.0.11:
     "@babel/runtime" "^7.0.0"
     less-loader "^4.1.0"
 
-gatsby-plugin-lunr@1.4.0:
+gatsby-plugin-lunr@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-lunr/-/gatsby-plugin-lunr-1.4.0.tgz#d3bdacfdc9b9f323db5be95950cf725edf08e6a4"
   integrity sha512-KhNhK3VujVugjY8nZsfIyK2hGNS2cMrhlaKYUuTOQp4v4baIDDtZ95PeD4/IGpcIhnlazO8ZTMtKt3MTfqcTHw==
