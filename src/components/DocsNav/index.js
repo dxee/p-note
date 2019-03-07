@@ -45,7 +45,7 @@ const DocsNav = ({ location }) => {
       defaultOpenKeys={
         pathname && pathname !== '/'
           ? getOpenKey(docsNavList, pathname)
-          : ['servers'] 
+          : ['servers']
       }
       selectedKeys={pathname ? [getMenuItemKey(pathname)] : []}
       style={{ height: '100%' }}
