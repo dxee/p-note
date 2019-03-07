@@ -19,6 +19,21 @@ const getOpenKey = (docsNavList, path) => {
   })
 }
 
+const getMenuItemKey = path => {
+  let menuItemKey = path
+  if (menuItemKey.substring(0, 1) === '/') {
+    menuItemKey = menuItemKey.substring(1, menuItemKey.length)
+  }
+
+  if (
+    menuItemKey.substring(menuItemKey.length - 1, menuItemKey.length) === '/'
+  ) {
+    menuItemKey = menuItemKey.substring(0, menuItemKey.length - 1)
+  }
+
+  return menuItemKey
+}
+
 const DocsNav = ({ location }) => {
   const pathname = location && location.pathname ? location.pathname : null
 
@@ -30,9 +45,9 @@ const DocsNav = ({ location }) => {
       defaultOpenKeys={
         pathname && pathname !== '/'
           ? getOpenKey(docsNavList, pathname)
-          : ['servers']
+          : ['servers'] 
       }
-      selectedKeys={pathname ? [pathname] : []}
+      selectedKeys={pathname ? [getMenuItemKey(pathname)] : []}
       style={{ height: '100%' }}
     >
       {docsNavList.map(item => {
