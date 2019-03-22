@@ -37,8 +37,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "npm run clean && gatsby build",
     "develop": "gatsby develop",
+    "clean": "gatsby clean",
     "lint:staged": "lint-staged",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
