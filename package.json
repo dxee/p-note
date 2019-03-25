@@ -5,10 +5,10 @@
   "version": "0.0.1",
   "author": "Bing Fan <bing.fxx@gmail.com>",
   "dependencies": {
-    "@babel/core": "7.3.4",
+    "@babel/core": "7.4.0",
     "@mdx-js/mdx": "0.20.3",
     "@mdx-js/tag": "0.20.3",
-    "antd": "3.15.0",
+    "antd": "3.15.2",
     "classnames": "2.2.6",
     "gatsby": "2.1.32",
     "gatsby-mdx": "0.4.3",
@@ -27,19 +27,20 @@
     "graphql": "14.1.1",
     "less": "3.9.0",
     "prop-types": "15.7.2",
-    "react": "16.8.4",
-    "react-dom": "16.8.4",
+    "react": "16.8.5",
+    "react-dom": "16.8.5",
     "react-helmet": "5.2.0",
-    "react-syntax-highlighter": "10.2.0"
+    "react-syntax-highlighter": "10.2.1"
   },
   "keywords": [
     "gatsby"
   ],
   "license": "MIT",
   "scripts": {
+    "clean": "gatsby clean",
+    "serve": "npm run build && gatsby serve",
     "build": "npm run clean && gatsby build",
     "develop": "gatsby develop",
-    "clean": "gatsby clean",
     "lint:staged": "lint-staged",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
